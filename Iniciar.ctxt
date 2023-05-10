@@ -2,6 +2,10 @@
 comment0.target=Iniciar
 comment1.params=
 comment1.target=Iniciar()
-comment2.params=e
-comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=3
+comment2.params=imagen
+comment2.target=void\ establecerImagen(javax.swing.ImageIcon)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=5
