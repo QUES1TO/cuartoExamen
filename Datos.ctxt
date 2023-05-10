@@ -2,6 +2,8 @@
 comment0.target=Datos
 comment1.params=
 comment1.target=Datos()
-comment2.params=e
-comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=3
+comment2.params=imagen
+comment2.target=void\ establecerImagen(javax.swing.ImageIcon)
+comment3.params=e
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=4
