@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MySQLConector
+comment1.params=
+comment1.target=MySQLConector()
+comment2.params=dato1\ dato2\ dato3
+comment2.target=void\ crearConexion(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=3

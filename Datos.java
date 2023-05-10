@@ -5,12 +5,13 @@ public class Datos extends JPanel implements ActionListener
 {
     private JTextField nombre,apellido,añoNacimiento;
     private JButton guardar, registrar;
-    private String dato1,dato2, dato3;
+    private String dato1,dato2,dato3;
     private Integer edad,año; 
     private JLabel label,label2,label3,label4,label5,label6,label7,label8;
     private JPanel panel,panel2,panel3,panel4;
     private JPanel panel5,panel6,panel7;
     private ImageIcon imagen1,imagen2;
+    private MySQLConector mySQLConector;
     public Datos()
     {
         setLayout(null);
@@ -18,6 +19,8 @@ public class Datos extends JPanel implements ActionListener
         setVisible(true);
         
         this.edad=2023;
+        
+        this.mySQLConector = new MySQLConector();
         
         setLayout(null);
         guardar = new JButton("GUARDAR");
@@ -168,6 +171,9 @@ public class Datos extends JPanel implements ActionListener
             panel4.setVisible(true);
             
             label8.setVisible(false);
+            
+            this.mySQLConector.crearConexion(dato1,dato2,dato3);
+            
         }
         if (objeto == registrar)
         {
