@@ -24,7 +24,7 @@ public class Iniciar extends JFrame implements ActionListener
         datos.setVisible(false);
         add(datos);
         
-        imagen1 = new ImageIcon(getClass().getResource("imagen1.jpg"));
+        imagen1 = new ImageIcon(getClass().getResource("imagen7.jpg"));
         
         label=new JLabel();
         label.setBounds(5,5,395,395);

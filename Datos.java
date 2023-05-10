@@ -6,13 +6,14 @@ public class Datos extends JPanel implements ActionListener
     private JTextField nombre,apellido,añoNacimiento;
     private JButton guardar, registrar;
     private String dato1,dato2,dato3;
-    private JLabel label,label2,label3,label4,label5,label6,label7;
+    private JLabel label,label2,label3,label4,label5,label6,label7,label8;
     private JPanel panel,panel2,panel3,panel4;
-    private ImageIcon imagen1;
+    private JPanel panel5,panel6,panel7;
+    private ImageIcon imagen1,imagen2;
     public Datos()
     {
         setLayout(null);
-        setBounds(0,0,480,480);
+        setBounds(0,0,410,400);
         setVisible(true);
         
         setLayout(null);
@@ -64,31 +65,57 @@ public class Datos extends JPanel implements ActionListener
         label5.setVisible(true);
         add(label5);
         
+        
+        panel5=new JPanel();
+        panel5.setBounds(57,90,60,20);
+        panel5.setVisible(true);
+        panel5.setBackground(Color.gray);
+        add(panel5);
+        
+        panel6=new JPanel();
+        panel6.setBounds(57,150,60,20);
+        panel6.setVisible(true);
+        panel6.setBackground(Color.gray);
+        add(panel6);
+        
+        panel7=new JPanel();
+        panel7.setBounds(30,197,100,20);
+        panel7.setVisible(true);
+        panel7.setBackground(Color.gray);
+        add(panel7);
+        
+        
         label6 = new JLabel();
         label6.setBounds(150, 190, 200, 40);
         label6.setVisible(true);
         add(label6);
         
         panel=new JPanel();
-        panel.setBounds(150, 80, 200, 40);
+        panel.setBounds(150, 94, 200, 20);
         panel.setVisible(false);
         panel.setBackground(Color.white);
         add(panel);
         
         panel2=new JPanel();
-        panel2.setBounds(150, 135, 200, 40);
+        panel2.setBounds(150, 145, 200, 20);
         panel2.setVisible(false);
         panel2.setBackground(Color.white);
         add(panel2);
         
         panel3=new JPanel();
-        panel3.setBounds(150, 190, 200, 40);
+        panel3.setBounds(150, 194, 200, 20);
         panel3.setVisible(false);
         panel3.setBackground(Color.white);
         add(panel3);
 
-         imagen1 = new ImageIcon(getClass().getResource("imagen1.jpg"));
-        
+         imagen1 = new ImageIcon(getClass().getResource("imagen8.jpg"));
+         imagen2 = new ImageIcon(getClass().getResource("imagen9.jpg"));
+         
+        label8=new JLabel();
+        label8.setBounds(5,5,395,395);
+        label8.setVisible(true);
+        add(label8);
+         
         label7=new JLabel();
         label7.setBounds(5,5,395,395);
         label7.setVisible(false);
@@ -105,6 +132,7 @@ public class Datos extends JPanel implements ActionListener
      public void establecerImagen(ImageIcon imagen)
     {
         label7.setIcon(imagen1);
+        label8.setIcon(imagen2);
     }
     public void actionPerformed(ActionEvent e)
     {        
@@ -116,12 +144,12 @@ public class Datos extends JPanel implements ActionListener
             panel.setVisible(true);
             nombre.setVisible(false);
             
-            dato2=this.nombre.getText();
+            dato2=this.apellido.getText();
             label5.setText(label5.getText()+dato2);
             apellido.setVisible(false);
             panel2.setVisible(true);
             
-            dato3=this.nombre.getText();
+            dato3=this.añoNacimiento.getText();
             label6.setText(label6.getText()+dato3);
             añoNacimiento.setVisible(false);
             panel3.setVisible(true);
@@ -130,6 +158,8 @@ public class Datos extends JPanel implements ActionListener
             registrar.setVisible(true);
             label7.setVisible(true);
             panel4.setVisible(true);
+            
+            label8.setVisible(false);
         }
         if (objeto == registrar)
         {
@@ -146,6 +176,7 @@ public class Datos extends JPanel implements ActionListener
             label7.setVisible(false);
             panel4.setVisible(false);
             
+            label8.setVisible(true);
         }
         
     }  
