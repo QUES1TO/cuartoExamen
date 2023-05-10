@@ -5,7 +5,8 @@ public class Datos extends JPanel implements ActionListener
 {
     private JTextField nombre,apellido,añoNacimiento;
     private JButton guardar, registrar;
-    private String dato1,dato2,dato3;
+    private String dato1,dato2, dato3;
+    private Integer edad,año; 
     private JLabel label,label2,label3,label4,label5,label6,label7,label8;
     private JPanel panel,panel2,panel3,panel4;
     private JPanel panel5,panel6,panel7;
@@ -16,16 +17,20 @@ public class Datos extends JPanel implements ActionListener
         setBounds(0,0,410,400);
         setVisible(true);
         
+        this.edad=2023;
+        
         setLayout(null);
         guardar = new JButton("GUARDAR");
         guardar.setBounds(100,250,200,45);
         guardar.addActionListener(this);
+        guardar.setBackground(Color.pink);
         guardar.setVisible(true);
         add(guardar);
         
         registrar = new JButton("REGISTRAR");
         registrar.setBounds(100,250,200,45);
         registrar.addActionListener(this);
+        registrar.setBackground(Color.orange);
         registrar.setVisible(false);
         add(registrar);
         
@@ -103,7 +108,7 @@ public class Datos extends JPanel implements ActionListener
         add(panel2);
         
         panel3=new JPanel();
-        panel3.setBounds(150, 194, 200, 20);
+        panel3.setBounds(150, 197, 200, 20);
         panel3.setVisible(false);
         panel3.setBackground(Color.white);
         add(panel3);
@@ -149,8 +154,11 @@ public class Datos extends JPanel implements ActionListener
             apellido.setVisible(false);
             panel2.setVisible(true);
             
+            
             dato3=this.añoNacimiento.getText();
             label6.setText(label6.getText()+dato3);
+            
+
             añoNacimiento.setVisible(false);
             panel3.setVisible(true);
             
@@ -167,7 +175,7 @@ public class Datos extends JPanel implements ActionListener
             apellido.setVisible(true);
             añoNacimiento.setVisible(true);
             guardar.setVisible(true);
-          
+            registrar.setVisible(false);
             
             panel.setVisible(false);
             panel2.setVisible(false);
@@ -177,6 +185,10 @@ public class Datos extends JPanel implements ActionListener
             panel4.setVisible(false);
             
             label8.setVisible(true);
+            
+            label4.setText("");
+            label5.setText("");
+            label6.setText("");
         }
         
     }  

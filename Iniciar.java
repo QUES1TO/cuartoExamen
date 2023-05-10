@@ -16,6 +16,7 @@ public class Iniciar extends JFrame implements ActionListener
         
         boton = new JButton("INICIAR");
         boton.addActionListener(this);
+        boton.setBackground(Color.orange);
         boton.setBounds(150,170,100,30);
         boton.setVisible(true);
         add(boton);
